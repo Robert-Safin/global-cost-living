@@ -1,0 +1,73 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+
+model DataEntry {
+  id        Int      @id @default(autoincrement())
+  cityName  String
+  country   String
+  mealInexpensiveRestaurantUSD Float?
+  mealForTwoMidRangeRestaurantThreeCourseUSD Float?
+  mcMealAtMcDonaldsOrEquivalentComboMealUSD Float?
+  domesticBeer05LiterDraughtInRestaurantsUSD Float?
+  importedBeer033LiterBottleInRestaurantsUSD Float?
+  cappuccinoRegularInRestaurantsUSD Float?
+  cokePepsi033LiterBottleInRestaurantsUSD Float?
+  water033LiterBottleInRestaurantsUSD Float?
+  milkRegular1LiterUSD Float?
+  loafOfFreshWhiteBread500gUSD Float?
+  riceWhite1kgUSD Float?
+  eggsRegular12USD Float?
+  localCheese1kgUSD Float?
+  chickenFillets1kgUSD Float?
+  beefRound1kgOrEquivalentBackLegRedMeatUSD Float?
+  apples1kgUSD Float?
+  banana1kgUSD Float?
+  oranges1kgUSD Float?
+  tomato1kgUSD Float?
+  potato1kgUSD Float?
+  onion1kgUSD Float?
+  lettuce1HeadUSD Float?
+  water15LiterBottleAtMarketUSD Float?
+  bottleOfWineMidRangeAtMarketUSD Float?
+  domesticBeer05LiterBottleAtMarketUSD Float?
+  importedBeer033LiterBottleAtMarketUSD Float?
+  cigarettes20PackMarlboroUSD Float?
+  oneWayTicketLocalTransportUSD Float?
+  monthlyPassRegularPriceUSD Float?
+  taxiStartNormalTariffUSD Float?
+  taxi1kmNormalTariffUSD Float?
+  taxi1hourWaitingNormalTariffUSD Float?
+  gasoline1LiterUSD Float?
+  volkswagenGolf14_90KWTrendlineOrEquivalentNewCarUSD Float?
+  toyotaCorollaSedan16l97kWComfortOrEquivalentNewCarUSD Float?
+  basicElectricityHeatingCoolingWaterGarbageFor85m2ApartmentUSD Float?
+  prepaidMobileTariffLocalNoDiscountsOrPlans1MinUSD Float?
+  internet60MbpsOrMoreUnlimitedDataCableADSLUSD Float?
+  fitnessClubMonthlyFeeFor1AdultUSD Float?
+  tennisCourtRent1HourOnWeekendUSD Float?
+  cinemaInternationalRelease1SeatUSD Float?
+  preschoolOrKindergartenFullDayPrivateMonthlyFor1ChildUSD Float?
+  internationalPrimarySchoolYearlyFor1ChildUSD Float?
+  levis501OrSimilar1PairOfJeansUSD Float?
+  summerDressInAChainStoreZaraHMUSD Float?
+  nikeRunningShoesMidRange1PairUSD Float?
+  menLeatherBusinessShoes1PairUSD Float?
+  apartment1BedroomInCityCentreUSD Float?
+  apartment1BedroomOutsideOfCentreUSD Float?
+  apartment3BedroomsInCityCentreUSD Float?
+  apartment3BedroomsOutsideOfCentreUSD Float?
+  pricePerSquareMeterToBuyApartmentInCityCentreUSD Float?
+  pricePerSquareMeterToBuyApartmentOutsideOfCentreUSD Float?
+  averageMonthlyNetSalaryAfterTaxUSD Float?
+  mortgageInterestRateInPercentagesYearlyFor20YearsFixedRate Float?
+  dataQuality Int?
+}
