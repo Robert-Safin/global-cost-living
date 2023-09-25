@@ -1,12 +1,13 @@
 "use client";
-import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { MutableRefObject, useRef } from "react";
+import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
+import { DirectionalLight, Object3D } from "three";
 
 const Model = () => {
   const { scene } = useGLTF("earth.glb");
-  const meshRef = useRef();
+  const meshRef = useRef<Object3D | null>(null);
 
   useFrame(({ clock }) => {
     if (meshRef.current) {
@@ -18,7 +19,7 @@ const Model = () => {
 };
 
 const RotatingLight = () => {
-  const lightRef = useRef();
+  const lightRef = useRef<DirectionalLight | null>(null);
 
   useFrame(({ clock }) => {
     if (lightRef.current) {
