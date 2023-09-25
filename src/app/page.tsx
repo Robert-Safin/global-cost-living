@@ -1,15 +1,13 @@
 import Earth from "@/components/Earth";
-import { PrismaClient } from "@prisma/client";
-
+import DataObject from '@/lib/DataObject'
+import { DataObjectType } from "@/lib/DataObjectType";
 const Page = async () => {
-  // const prisma = new PrismaClient();
 
-  // const cities = await prisma.dataEntry.findMany({
-  //   where: {
-  //     cityName: "Aberdeen",
-  //   },
-  // });
-  // console.log(cities.length);
+  // const goodEntries = DataObject.filter((entry)=>
+  // entry.dataQuality === 1
+  // )
+  // console.log(goodEntries.length);
+
 
   return (
     <div className="w-full mx-auto h-screen border">{/* <Earth /> */}</div>
