@@ -7,8 +7,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-black max-w-[1440px]'>
-      <body>{children}</body>
+    <html lang="en" className='bg-black '>
+      <body className='max-w-[1440px] mx-auto'>{children}</body>
     </html>
   )
 }

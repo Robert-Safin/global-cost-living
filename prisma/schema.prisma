@@ -70,4 +70,7 @@ model DataEntry {
   averageMonthlyNetSalaryAfterTaxUSD Float?
   mortgageInterestRateInPercentagesYearlyFor20YearsFixedRate Float?
   dataQuality Int?
+  latitude Float?
+  longitude Float?
+  population Float?
 }
