@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import Earth from "@/components/Earth";
 
-export default function Home() {
+const Page = async() => {
   return (
-    <main className="">
+    <div className="w-screen h-screen border">
+      <Earth />
+    </div>
+  );
+};
 
-    </main>
-  )
-}
+export default Page;
